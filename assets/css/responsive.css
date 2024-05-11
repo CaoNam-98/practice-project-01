@@ -1,103 +1,199 @@
 /* PC */
 @media screen and (min-width: 992px) {
-    .mobile-header {
-        display: none;
-    }
+  .mobile-header {
+    display: none;
+  }
 
+  .show-on-mobile {
+    display: none;
+  }
 }
 
 /* Tablet & mobile */
 /* CSS chung cho cả tablet và mobile => tối ưu code */
 @media screen and (max-width: 991px) {
-    .navbar {
-        position: relative;
-    }
+  .navbar {
+    position: relative;
+  }
 
-    .navbar .logo {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    /* ẩn navbar với tablet và mobile */
-    .navbar ul {
-        display: none;
-    }
+  .navbar .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  /* ẩn navbar với tablet và mobile */
+  .navbar ul {
+    display: none;
+    margin: 0;
+  }
 
-    .toggle-menu svg {
-        width: 20px;
-    }
+  .toggle-menu svg {
+    width: 20px;
+  }
 
-    .menu-overlay {
-        position: fixed;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.3);
-        z-index: 1;
-        /* Để bỏ phần overlay đi thì dùng => nhưng nó vẫn còn tồn tại trên màn hình => không thể bấm được các button bên dưới*/
-        opacity: 0;
-        /* Action xử lý vấn đề là thêm để giúp nó mất đi khỏi trên màn hình */
-        visibility: hidden;
-        /* Thêm transition cho mượt hơn với .menu-checkbox:checked ~ .menu-overlay */
-        transition: 0.5s ease;
-    }
+  .menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    /* Để bỏ phần overlay đi thì dùng => nhưng nó vẫn còn tồn tại trên màn hình => không thể bấm được các button bên dưới*/
+    opacity: 0;
+    /* Action xử lý vấn đề là thêm để giúp nó mất đi khỏi trên màn hình */
+    visibility: hidden;
+    /* Thêm transition cho mượt hơn với .menu-checkbox:checked ~ .menu-overlay */
+    transition: 0.5s ease;
+  }
 
-    .menu-drawer {
-        position: fixed;
-        padding: 60px;
-        /* width sẽ chiếm 60% */
-        inset: 0 40% 0 0;
-        background: #fff;
-        /* Cao hơn overlay */
-        z-index: 2;
-        /* Cho nso khuất khỏi màn hình */
-        transform: translateX(-100%);
-        /* Cho hiệu ứng với .menu-checkbox:checked ~ .menu-drawer */
-        transition: 0.5s ease;
-    }
+  .menu-drawer {
+    position: fixed;
+    padding: 60px;
+    /* width sẽ chiếm 60% */
+    inset: 0 40% 0 0;
+    background: #fff;
+    /* Cao hơn overlay */
+    z-index: 2;
+    /* Cho nso khuất khỏi màn hình */
+    transform: translateX(-100%);
+    /* Cho hiệu ứng với .menu-checkbox:checked ~ .menu-drawer */
+    transition: 0.5s ease;
+  }
 
-    .menu-checkbox:checked ~ .menu-overlay {
-        opacity: 1;
-        visibility: visible;
-    }
+  .menu-checkbox:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
 
-    .menu-checkbox:checked ~ .menu-drawer {
-        transform: translateX(0);
-    }
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
 
-    .menu-drawer #tablet-nav {
-        margin-top: 32px;
-        display: block;
-        margin-left: 0;
-    }
+  .menu-drawer #tablet-nav {
+    margin-top: 32px;
+    display: block;
+    margin-left: 0;
+  }
 
-    .menu-drawer #tablet-nav a {
-        display: block;
-        padding: 14px 0;
-        color: #333;
-        font-weight: 500;
-    }
+  .menu-drawer #tablet-nav a {
+    display: block;
+    padding: 14px 0;
+    color: #333;
+    font-weight: 500;
+    padding: 14px 0;
+    display: block;
+  }
 
-    .separate {
-        border-top: 1.5px solid #ebebeb;
-    }
+  .separate {
+    border-top: 1.5px solid #ebebeb;
+  }
 
+  .navbar ul#mobile-nav {
+    display: block;
+    margin-top: 32px;
+  }
+
+  .navbar ul a {
+    padding: 14px 0;
+    display: block;
+    color: #4f5361;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  .hero-wrap .info {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero-wrap .desc {
+    width: 80%;
+    margin: 30px auto auto;
+  }
+
+  .clients .images {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .guide-item {
+    flex: 1;
+    margin: 0;
+  }
+
+  .featured .list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stats .row {
+    flex-direction: column;
+  }
+
+  .stats .img-block,
+  .stats .info {
+    width: 100%;
+  }
+
+  .stats .img-block {
+    margin-top: 80px;
+    order: 2;
+  }
+
+  .stats .info {
+    padding: 0;
+    order: 1;
+  }
+
+  .stats .info .sub-title {
+    width: 70%;
+  }
+
+  .stats .info .desc {
+    width: 100%;
+  }
+
+  .stats .row-qty {
+    flex-direction: row;
+  }
+
+  .stats .qty {
+    font-size: 5rem;
+  }
+
+  .stats .qty-desc {
+    font-size: 1.5rem;
+  }
+
+  .subscription .image {
+    display: none;
+  }
+
+  .footer .row-top {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    row-gap: 80px;
+  }
 }
 
 /* Tablet */
 @media screen and (min-width: 768px) and (max-width: 991px) {
-    .hide-on-tablet {
-        visibility: hidden;
-    }
+  .show-on-mobile {
+    display: none !important;
+  }
+
+  .hero-img {
+    display: none;
+  }
 }
 
 /* Mobile */
 @media screen and (max-width: 767px) {
-    .menu-drawer {
-        inset: 0 25% 0 0;
-        padding: 40px;
-    }
+  .menu-drawer {
+    inset: 0 25% 0 0;
+    padding: 40px;
+  }
 
-    .navbar .actions {
-        display: none;
-    }
+  .navbar .actions {
+    display: none;
+  }
 }

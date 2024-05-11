@@ -45,8 +45,8 @@
             </a>
 
             <!-- Navigation -->
-            <ul id="tablet-nav">
-              <li>
+            <ul id="mobile-nav">
+              <!-- <li>
                 <a href="#!">Home</a>
               </li>
               <li>
@@ -66,7 +66,7 @@
               </li>
               <li>
                 <a href="#!" class="hide-on-tablet">Sign up</a>
-              </li>
+              </li> -->
             </ul>
           </div>
         </header>
@@ -75,7 +75,7 @@
           <img src="./assets/img/logo.svg" alt="Besnik." class="logo" />
         </a>
         <!-- Navigation -->
-        <ul id="pc-nav">
+        <!-- <ul id="pc-nav">
           <li>
             <a href="#!">Home</a>
           </li>
@@ -91,6 +91,30 @@
           <li>
             <a href="#!">Contact</a>
           </li>
+        </ul> -->
+         <!-- Navigation -->
+         <ul id="pc-nav">
+          <li>
+            <a href="#!">Home</a>
+          </li>
+          <li>
+            <a href="#!">Services</a>
+          </li>
+          <li>
+            <a href="#!">Features</a>
+          </li>
+          <li>
+            <a href="#!">Resources</a>
+          </li>
+          <li>
+            <a href="#!">Contact</a>
+          </li>
+          <li>
+            <a href="#!" class="show-on-mobile separate">Sign in</a>
+          </li>
+          <li>
+            <a href="#!" class="show-on-mobile">Sign up</a>
+          </li>
         </ul>
         <!-- Action -->
         <div class="actions">
@@ -100,7 +124,7 @@
       </nav>
     </div>
   </header>
-  <main hidden>
+  <main>
     <!-- Hero -->
     <div class="hero-wrap">
       <div class="content">
@@ -376,7 +400,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer" style="display: none">
+    <footer class="footer">
       <div class="content">
         <div class="row row-top">
           <div class="column">
@@ -430,5 +454,13 @@
     </footer>
   </main>
 </body>
+<script>
+  const pcNav = document.querySelector('#pc-nav');
+  console.log('pcNav: ', pcNav);
+  const mobileNav = document.querySelector('#mobile-nav');
+  console.log('mobileNav: ', mobileNav);
+  // Copy from PC-Nav to Mobile-Nav
+  mobileNav.innerHTML = pcNav.innerHTML;
+</script>
 
 </html>
