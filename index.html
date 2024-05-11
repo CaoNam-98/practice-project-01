@@ -26,6 +26,50 @@
   <header class="fixed-header">
     <div class="content">
       <nav class="navbar">
+        <!-- Tablet/mobile menu -->
+        <label for="menu-checkbox" class="toggle-menu">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+        </label>
+
+        <!-- Tablet/mobile header -->
+        <header class="mobile-header">
+          <!-- Xử lý bấm vào thì show lên -->
+          <input type="checkbox" name="" id="menu-checkbox" class="menu-checkbox" hidden>
+          <!-- Overlay -->
+          <label for="menu-checkbox" class="menu-overlay"></label>
+          <!-- Menu content -->
+          <div class="menu-drawer">
+            <!-- Logo -->
+            <a href="#!">
+              <img src="./assets/img/logo.svg" alt="Besnik." />
+            </a>
+
+            <!-- Navigation -->
+            <ul id="tablet-nav">
+              <li>
+                <a href="#!">Home</a>
+              </li>
+              <li>
+                <a href="#!">Services</a>
+              </li>
+              <li>
+                <a href="#!">Features</a>
+              </li>
+              <li>
+                <a href="#!">Resources</a>
+              </li>
+              <li>
+                <a href="#!">Contact</a>
+              </li>
+              <li>
+                <a href="#!" class="hide-on-tablet separate">Sign in</a>
+              </li>
+              <li>
+                <a href="#!" class="hide-on-tablet">Sign up</a>
+              </li>
+            </ul>
+          </div>
+        </header>
         <!-- Logo -->
         <a href="#!">
           <img src="./assets/img/logo.svg" alt="Besnik." class="logo" />
@@ -56,7 +100,7 @@
       </nav>
     </div>
   </header>
-  <main>
+  <main hidden>
     <!-- Hero -->
     <div class="hero-wrap">
       <div class="content">
@@ -332,7 +376,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" style="display: none">
       <div class="content">
         <div class="row row-top">
           <div class="column">
